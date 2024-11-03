@@ -19,7 +19,8 @@ export async function normalizeOptions(
   return {
     ...options,
     flat: true,
-    name: fileName,
+    path: fileName,
+    name: options.name ?? fileName,
     skipFormat: options.skipFormat,
     sourceRoot: directory,
   };
